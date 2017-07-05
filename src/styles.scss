@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-    font-family: 'digital';
-    src: url("/src/assets/fonts/LettersLaughingbyQuantizedandCalibrated.ttf") format("truetype");
+    font-family : 'digital';
+    src         : url("assets/fonts/LettersLaughingbyQuantizedandCalibrated.ttf") format("truetype");
 }
 
 @import "scss/_bootstrap.scss";
@@ -32,7 +32,6 @@ main {
     background-image          : url('assets/images/angular_background.png');
     background-position       : 2vw 0;
     background-size           : 38%;
-    opacity                   : .5;
     animation-name            : main_background;
     animation-duration        : 10000ms;
     animation-iteration-count : infinite;

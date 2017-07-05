@@ -1,4 +1,8 @@
 <h2 class="hidden">METRONOME</h2>
 <div class="metronome">
-    TOP
+    <div class="row metronome-content top">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 column">
+            <app-tempo-display [tempo]="this.getTempo()" [runStatus]="this.getAnimation()"></app-tempo-display>
+        </div>
+    </div>
 </div>

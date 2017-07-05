@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {TempoService} from '../../../service/tempo.service';
 
 @Component({
     templateUrl: './top.component.html',
@@ -6,10 +7,18 @@ import {Component, OnInit} from '@angular/core';
 })
 export class TopComponent implements OnInit {
 
-    constructor() {
+    constructor(private tempoService: TempoService) {
+
     }
 
     ngOnInit() {
     }
 
+    getTempo(): number {
+        return this.tempoService.tempo;
+    }
+
+    getAnimation(): string {
+        return this.tempoService.animation;
+    }
 }

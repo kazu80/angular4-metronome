@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './component/app/app.component';
 import {TopComponent} from './component/metronome/top/top.component';
 import {routing} from './app.routing';
+import {TempoDisplayComponent} from './component/metronome/tempo-display/tempo-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopComponent
+    TopComponent,
+    TempoDisplayComponent
   ],
   imports: [
     BrowserModule,
