@@ -9,6 +9,7 @@ import {BeatComponent} from './component/metronome/beat/beat.component';
 import {SoundComponent} from './component/metronome/sound/sound.component';
 import {TempoControlComponent} from './component/metronome/tempo-control/tempo-control.component';
 import {TempoControlButtonComponent} from './component/metronome/tempo-control-button/tempo-control-button.component';
+import {VolumeComponent} from './component/metronome/volume/volume.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {TempoControlButtonComponent} from './component/metronome/tempo-control-b
     BeatComponent,
     SoundComponent,
     TempoControlComponent,
-    TempoControlButtonComponent
+    TempoControlButtonComponent,
+    VolumeComponent
   ],
   imports: [
     BrowserModule,

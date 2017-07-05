@@ -3,6 +3,7 @@ import {TempoService} from '../../service/tempo.service';
 import {BeatService} from '../../service/beat.service';
 import {MetronomeCommon} from '../../common/metronome.common';
 import {SoundService} from '../../service/sound.service';
+import {VolumeService} from "../../service/volume.service";
 
 @Component({
     selector   : 'app-root',
@@ -12,7 +13,8 @@ import {SoundService} from '../../service/sound.service';
         MetronomeCommon,
         TempoService,
         BeatService,
-        SoundService
+        SoundService,
+        VolumeService
     ]
 })
 export class AppComponent implements OnInit {
