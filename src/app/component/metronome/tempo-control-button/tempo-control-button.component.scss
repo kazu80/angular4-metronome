@@ -1,0 +1,9 @@
+.tempo-button {
+    &.prev {
+        background-image : url("../../../../assets/images/minus.svg");
+    }
+
+    &.next {
+        background-image : url("../../../../assets/images/plus.svg");
+    }
+}
