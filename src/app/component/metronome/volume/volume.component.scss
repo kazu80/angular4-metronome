@@ -10,3 +10,12 @@
     font-size  : 20px;
     text-align : left;
 }
+
+.volume {
+    .display {
+        li {
+            padding        : 0;
+            letter-spacing : -1px;
+        }
+    }
+}
