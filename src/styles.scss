@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'digital';
+    src: url("/src/assets/fonts/LettersLaughingbyQuantizedandCalibrated.ttf") format("truetype");
+}
+
+@import "scss/_bootstrap.scss";
+
 * {
     margin     : 0;
     padding    : 0;
@@ -12,4 +19,29 @@ body {
     height           : 100vh;
     background-color : #fefefe;
     font-family      : 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: "HelveticaNeue-Thin", "HelveticaNeue-Light", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    background-image: url("assets/images/pic_01.png");
+    background-repeat: no-repeat;
+}
+
+.container {
+    position: relative;
+    max-width: 768px;
+    text-align: center;
+    text-align: -webkit-center;
+}
+
+.padding-0 {
+    padding: 0;
+}
+
+@import "scss/_header.scss";
+@import "scss/_metoronome.scss";
+
+.footer {
+    height : 67px;
+    width  : 100%;
 }
