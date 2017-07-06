@@ -12,6 +12,7 @@ import {TempoControlButtonComponent} from './component/metronome/tempo-control-b
 import {VolumeComponent} from './component/metronome/volume/volume.component';
 import {RunComponent} from './component/metronome/run/run.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MainComponent} from './component/stop-watch/main/main.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     TempoControlComponent,
     TempoControlButtonComponent,
     VolumeComponent,
-    RunComponent
+    RunComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
