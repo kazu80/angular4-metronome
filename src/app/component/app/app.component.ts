@@ -4,6 +4,9 @@ import {BeatService} from '../../service/beat.service';
 import {MetronomeCommon} from '../../common/metronome.common';
 import {SoundService} from '../../service/sound.service';
 import {VolumeService} from '../../service/volume.service';
+import {AppDispatcher} from '../../walts/app.dispatcher';
+import {AppActions} from '../../walts/app.actions';
+import {AppStore} from '../../walts/app.store';
 
 @Component({
     selector   : 'app-root',
@@ -14,7 +17,10 @@ import {VolumeService} from '../../service/volume.service';
         TempoService,
         BeatService,
         SoundService,
-        VolumeService
+        VolumeService,
+        AppDispatcher,
+        AppActions,
+        AppStore
     ]
 })
 export class AppComponent implements OnInit {
