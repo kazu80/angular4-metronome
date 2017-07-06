@@ -6,10 +6,10 @@ export class Sound {
 }
 
 const SOUNDS: Sound[] = [
-    {id: 1, file: '../../src/assets/sound/s_01.mp3'},
-    {id: 2, file: '../../src/assets/sound/s_02.mp3'},
-    {id: 3, file: '../../src/assets/sound/s_03.mp3'},
-    {id: 4, file: '../../src/assets/sound/s_04.mp3'}
+    {id: 1, file: '../../../../assets/sound/s_01.mp3'},
+    {id: 2, file: '../../../../assets/sound/s_02.mp3'},
+    {id: 3, file: '../../../../assets/sound/s_03.mp3'},
+    {id: 4, file: '../../../../assets/sound/s_04.mp3'}
 ];
 
 @Injectable()

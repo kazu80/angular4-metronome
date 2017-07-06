@@ -10,6 +10,8 @@ import {SoundComponent} from './component/metronome/sound/sound.component';
 import {TempoControlComponent} from './component/metronome/tempo-control/tempo-control.component';
 import {TempoControlButtonComponent} from './component/metronome/tempo-control-button/tempo-control-button.component';
 import {VolumeComponent} from './component/metronome/volume/volume.component';
+import {RunComponent} from './component/metronome/run/run.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -20,10 +22,12 @@ import {VolumeComponent} from './component/metronome/volume/volume.component';
     SoundComponent,
     TempoControlComponent,
     TempoControlButtonComponent,
-    VolumeComponent
+    VolumeComponent,
+    RunComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     routing
   ],
   providers: [],
