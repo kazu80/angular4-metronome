@@ -1,0 +1,21 @@
+{
+  "name": "angular4-metronome",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Kazuyoshi Kawakami <saruyama.monki@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/monkick/angular4-metronome",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.1.1"
+  }
+}

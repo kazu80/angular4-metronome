@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 import { AppComponent } from './component/app/app.component';
 import {TopComponent} from './component/metronome/top/top.component';
@@ -29,12 +29,13 @@ import {RecordingComponent} from './component/recording/recording/recording.comp
     MainComponent,
     RecordingComponent
   ],
-  imports: [
+  imports     : [
     BrowserModule,
     BrowserAnimationsModule,
     routing
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers   : [],
+    bootstrap : [AppComponent],
+    schemas   : [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }

@@ -1,0 +1,54 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="metronome-counter">
+    <template>
+        <style>
+            :host {
+                position : relative;
+                top      : 4px;
+                left     : 10px;
+                float    : left;
+            }
+
+            .display {
+                display        : table-cell;
+                padding        : 0 10px;
+                height         : 55px;
+                width          : 100px;
+                border         : 2px solid #626262;
+                vertical-align : middle;
+                text-align     : right;
+                background     : linear-gradient(0deg, #75a348 0%, #69bb6f 67%, #64c682 100%);
+            }
+
+            .display p {
+                margin      : 0;
+                padding-top : 8px;
+                font-family : "digital", cursive;
+                font-size   : 3.2rem;
+            }
+        </style>
+        <div class="display">
+            <p>{{count}}</p>
+        </div>
+    </template>
+
+    <script>
+        class MetronomeCounter extends Polymer.Element {
+            static get is () { return 'metronome-counter'; }
+
+            static get properties () {
+                return {
+                    count: {
+                        type : Number,
+                        value: 0,
+                    }
+                }
+            }
+
+        }
+
+        customElements.define (MetronomeCounter.is, MetronomeCounter);
+    </script>
+
+</dom-module>
