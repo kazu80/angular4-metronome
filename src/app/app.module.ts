@@ -11,7 +11,7 @@ import {TempoControlComponent} from './component/metronome/tempo-control/tempo-c
 import {TempoControlButtonComponent} from './component/metronome/tempo-control-button/tempo-control-button.component';
 import {VolumeComponent} from './component/metronome/volume/volume.component';
 import {RunComponent} from './component/metronome/run/run.component';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MainComponent} from './component/stop-watch/main/main.component';
 import {RecordingComponent} from './component/recording/recording/recording.component';
 

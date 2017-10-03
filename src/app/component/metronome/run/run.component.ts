@@ -4,6 +4,7 @@ import {Beat, BeatService} from '../../../service/beat.service';
 import {Sound, SoundService} from '../../../service/sound.service';
 import {Volume, VolumeService} from '../../../service/volume.service';
 import {TempoService} from '../../../service/tempo.service';
+import {CounterService} from '../../../service/counter.service';
 
 @Component({
     selector   : 'app-run',
@@ -47,7 +48,8 @@ export class RunComponent implements OnInit {
     constructor(private volumeService: VolumeService,
                 private beatService: BeatService,
                 private soundService: SoundService,
-                private tempoService: TempoService,) {
+                private tempoService: TempoService,
+                private counterService: CounterService) {
     }
 
     ngOnInit() {
@@ -93,6 +95,10 @@ export class RunComponent implements OnInit {
         // 停止
         if (!this.isDuringExecution) {
             clearInterval(this.interval);
+
+            // reset tempo counter
+            this.counterService.resetCount();
+
             return;
         }
 
@@ -112,6 +118,10 @@ export class RunComponent implements OnInit {
         this.interval  = setInterval(() => {
             count % beatCount === 0 ? this.audioBeat.play() : this.audioTempo.play();
             count++;
+
+            // tempo counter
+            this.counterService.inclementCount();
+
         }, 60 * 1000 / this.tempo);
     }
 

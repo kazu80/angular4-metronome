@@ -7,6 +7,7 @@ import {VolumeService} from '../../service/volume.service';
 import {AppDispatcher} from '../../walts/app.dispatcher';
 import {AppActions} from '../../walts/app.actions';
 import {AppStore} from '../../walts/app.store';
+import {CounterService} from '../../service/counter.service';
 
 @Component({
     selector   : 'app-root',
@@ -18,17 +19,20 @@ import {AppStore} from '../../walts/app.store';
         BeatService,
         SoundService,
         VolumeService,
+        CounterService,
         AppDispatcher,
         AppActions,
         AppStore
     ]
 })
 export class AppComponent implements OnInit {
-
-    constructor() {
+    constructor(private counterService: CounterService) {
     }
 
     ngOnInit() {
     }
 
+    getCount() {
+        return this.counterService.count;
+    }
 }
