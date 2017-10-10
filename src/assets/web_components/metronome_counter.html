@@ -31,7 +31,7 @@
             .message,
             #container ::slotted(.message) {
                 position    : absolute;
-                top         : 45vh;
+                top         : 80px;
                 left        : -15vw;
                 width       : 100%;
                 font-size   : 4vw;
@@ -65,101 +65,148 @@
             _observerCount (val) {
                 const el = this.shadowRoot.querySelector ('.message');
 
+                const opening = new Audio ('/assets/sound/opening.mp3');
+                opening.volume = 0.4;
+
+                opening.addEventListener ('ended', function () {
+                    if (val !== 0) {
+                        this.currentTime = 4;
+                        this.play ();
+                    }
+                }, false);
+
+                const audio = new Audio ('/assets/sound/cheer.mp3');
+
+                const interval = 30;
+
                 switch (val) {
-                    case 10:
+                    case 0:
+                        el.innerHTML = '';
+                        break;
+
+                    case interval + 1:
+                        opening.play ();
+
+                        break;
+                    case interval + 10:
                         el.innerHTML = 'みなさん、こんにちわ';
                         break;
 
-                    case 20:
-                        el.innerHTML = '川上と申します。';
+                    case interval + 20:
+                        el.innerHTML = 'メトロノーム川上です。';
                         break;
 
-                    case 30:
+                    case interval + 30:
                         el.innerHTML = '今回、メトロノームに';
                         break;
 
-                    case 35:
+                    case interval + 35:
                         el.innerHTML = '新機能を付けたんですが、';
                         break;
 
-                    case 40:
+                    case interval + 40:
                         el.innerHTML = 'わかります？？';
                         break;
 
-                    case 50:
+                    case interval + 50:
                         el.innerHTML = 'そうです！！';
                         break;
 
-                    case 55:
+                    case interval + 55:
                         el.innerHTML = '今見ていただいている';
                         break;
 
-                    case 60:
+                    case interval + 60:
                         el.innerHTML = 'このカウンターと';
                         break;
 
-                    case 70:
+                    case interval + 70:
                         el.innerHTML = 'メッセージ表示です。';
                         break;
 
-                    case 80:
-                        el.innerHTML = 'おもしろいでしょ？';
+                    case interval + 80:
+                        el.innerHTML = 'おもしろいですか？';
                         break;
 
-                    case 90:
-                        el.innerHTML = 'え！？';
+                    case interval + 90:
+                        el.innerHTML = 'え...';
                         break;
 
-                    case 100:
-                        el.innerHTML = '「・・・」って思った？？';
+                    case interval + 100:
+                        el.innerHTML = '「微妙」って思った？？';
                         break;
 
-                    case 110:
-                        el.innerHTML = ':(';
+                    case interval + 110:
+                        el.innerHTML = 'T_T';
                         break;
 
-                    case 120:
-                        el.innerHTML = 'そろそろ、付ける機能を';
+                    case interval + 112:
+                        el.innerHTML = 'T_T　T_T';
                         break;
 
-                    case 130:
-                        el.innerHTML = '考えるの限界なんです。';
+                    case interval + 114:
+                        el.innerHTML = 'T_T　T_T　T_T';
                         break;
 
-                    case 140:
+                    case interval + 120:
+                        el.innerHTML = 'そろそろ付ける機能を';
+                        break;
+
+                    case interval + 130:
+                        el.innerHTML = '考えるの限界なんです';
+                        break;
+
+                    case interval + 140:
                         el.innerHTML = 'でも';
                         break;
 
-                    case 150:
+                    case interval + 150:
                         el.innerHTML = 'この新機能は…';
                         break;
 
-                    case 160:
+                    case interval + 160:
                         el.innerHTML = 'Web Componentで作りました';
+
+                        audio.play ();
                         break;
 
-                    case 170:
-                        el.innerHTML = 'そう！Polymer製';
+                    case interval + 170:
+                        audio.play ();
                         break;
 
-                    case 180:
-                        el.innerHTML = 'Angular x Polymer';
+                    case interval + 180:
+                        el.innerHTML = 'Angular x WebComponent';
+
+                        audio.play ();
                         break;
 
-                    case 182:
+                    case interval + 182:
                         el.style.color = '#228';
+
+                        audio.play ();
                         break;
 
-                    case 184:
+                    case interval + 184:
                         el.style.color = '#282';
+
+                        audio.play ();
                         break;
 
-                    case 186:
+                    case interval + 186:
                         el.style.color = '#c22';
+
+                        audio.play ();
                         break;
 
-                    case 190:
-                        el.innerHTML = 'Thank you';
+                    case interval + 190:
+                        el.innerHTML = '以上！';
+
+                        audio.play ();
+                        break;
+
+                    case interval + 200:
+                        opening.pause ();
+                        opening.currentTime = 4;
                         break;
                 }
             }
